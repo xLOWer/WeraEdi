@@ -1,0 +1,49 @@
+﻿<dx:ThemedWindow x:Class="WeraEdi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"  
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+        xmlns:dxpdf="http://schemas.devexpress.com/winfx/2008/xaml/pdf"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxwuin="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/navigation"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"      
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/controls"
+        xmlns:local="clr-namespace:WeraEdi"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        dx:ThemeManager.Theme="VS2019Light"
+        >
+
+    <dxwui:HamburgerMenu Header="EDI" AllowBuiltInNavigation="True" ShowRevealHighlightEffect="True" >
+
+        <dxwui:HamburgerMenu.Items>
+            <dxwui:HamburgerMenuNavigationButton Content="Войти" 
+                                                     IsSelected="True" 
+                                                     NavigationTargetTypeName="WeraEdi.View.AuthView" 
+                                                     Glyph="{dx:DXImage SvgImages/HybridDemoIcons/Tiles/HybridDemo_Employees.svg}"
+                                                 GlyphColor="White"/>
+            <dxwui:HamburgerMenuNavigationButton Content="Заказы" 
+                                                 NavigationTargetTypeName="WeraEdi.View.OrderListView" 
+                                                 Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Order List.svg}"
+                                                 GlyphColor="White"/>
+
+            <dxwui:HamburgerSubMenu Content="Меню" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Settings.svg}">
+                <dxwui:HamburgerSubMenu.Items>
+                    <dxwui:HamburgerSubMenuNavigationButton Content="MenuSubItem 1" ShowInPreview="True" SelectOnClick="False" RightContent="RC"/>
+                    <dxwui:HamburgerSubMenuNavigationButton Content="MenuSubItem 2" ShowInPreview="True" SelectOnClick="False"/>
+                    <dxwui:HamburgerSubMenuNavigationButton Content="MenuSubItem 3"/>
+                    <dxwui:HamburgerSubMenuNavigationButton Content="MenuSubItem 4" ShowPreviewMark="True"/>
+                </dxwui:HamburgerSubMenu.Items>
+            </dxwui:HamburgerSubMenu>
+        </dxwui:HamburgerMenu.Items>
+        
+
+    </dxwui:HamburgerMenu>
+</dx:ThemedWindow>
